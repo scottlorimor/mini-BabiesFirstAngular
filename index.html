@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html data-ng-app="friendsList">
+<head>
+	<title>First Angular App</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body data-ng-controller="mainController">
+	<p>My name is: {{name}}</p>
+	<p>These are some friends: </p>
+	<div data-ng-repeat="friend in friends">
+		<ul>
+			<li>{{friend}}</li>
+		</ul>
+		<!-- <p>{{friend}}</p> -->
+	</div>
+	<div>
+		<p>Add new friend below: </p>
+		<input type="text" placeholder="enter name..." data-ng-model="newFriend">
+		<button data-ng-click="addFriend()">Add Friend</button>
+	</div>
+
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/mainController.js"></script>
+</body>
+</html>
